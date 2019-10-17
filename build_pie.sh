@@ -22,6 +22,7 @@ clear
 
 Telegram_Api_code=
 chat_id=
+jenkinsurl=
 
 # Init Methods
 
@@ -44,7 +45,9 @@ EVOX-SOURCE()
     
     $(date)
     
-    👤 By: Raghu Varma"        
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"     
     . build/envsetup.sh && lunch aosp_Dragon-userdebug && make -j32 bacon
     cd out/target/product/Dragon
     rm -r android-info.txt  dex_bootjars obj_arm  product_copy_files_ignored.txt  symbols boot.img fake_packages ramdisk.img system build_fingerprint.txt gen ramdisk-recovery.img userdata.img build_thumbprint.txt install recovery clean_steps.mk kernel recovery.id data obj previous_build_config.mk  root vendor
@@ -96,7 +99,9 @@ LINEAGE-SOURCE()
     
     $(date)
     
-    👤 By: Raghu Varma"     
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"  
     . build/envsetup.sh && lunch lineage_Dragon-eng && make -j32 bacon
     cd out/target/product/Dragon
     rm -r android-info.txt  dex_bootjars obj_arm  product_copy_files_ignored.txt  symbols boot.img fake_packages ramdisk.img system build_fingerprint.txt gen ramdisk-recovery.img userdata.img build_thumbprint.txt install recovery clean_steps.mk kernel recovery.id data obj previous_build_config.mk  root vendor
@@ -136,7 +141,9 @@ LINEAGE-SOURCE()
     
     $(date)
     
-    👤 By: Raghu Varma"     
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"
     . build/envsetup.sh && lunch lineage_Onyx-eng && make -j32 bacon
     cd out/target/product/Onyx
     rm -r android-info.txt  dex_bootjars obj_arm  product_copy_files_ignored.txt  symbols boot.img fake_packages ramdisk.img system build_fingerprint.txt gen ramdisk-recovery.img userdata.img build_thumbprint.txt install recovery clean_steps.mk kernel recovery.id data obj previous_build_config.mk  root vendor
@@ -183,7 +190,9 @@ LINEAGE-SOURCE()
     
     $(date)
     
-    👤 By: Raghu Varma"       
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"    
     . build/envsetup.sh && lunch lineage_whyred-eng && make -j32 bacon
     cd out/target/product/whyred
     rm -r android-info.txt  dex_bootjars obj_arm  product_copy_files_ignored.txt  symbols boot.img fake_packages ramdisk.img system build_fingerprint.txt gen ramdisk-recovery.img userdata.img build_thumbprint.txt install recovery clean_steps.mk kernel recovery.id data obj previous_build_config.mk  root vendor
@@ -237,21 +246,27 @@ TWRP-P-SOURCE()
     
     $(date)
     
-    👤 By: Raghu Varma"         
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"        
     . build/envsetup.sh && lunch omni_DRG_sprout-eng && make -j32 recoveryimage
     curl -s -X POST https://api.telegram.org/bot$Telegram_Api_code/sendMessage -d chat_id=$chat_id -d text="
     New TWRP-3.3.1-0 for Nokia 7 Plus build started 
     
     $(date)
     
-    👤 By: Raghu Varma"    
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"   
     . build/envsetup.sh && lunch omni_B2N_sprout-eng && make -j32 recoveryimage
     curl -s -X POST https://api.telegram.org/bot$Telegram_Api_code/sendMessage -d chat_id=$chat_id -d text="
     New TWRP-3.3.1-0 for Redmi Note 5 Pro build started 
     
     $(date)
     
-    👤 By: Raghu Varma"    
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"
     . build/envsetup.sh && lunch omni_whyred-eng && make -j32 recoveryimage	
     cd out/target/product/DRG_sprout
     mv recovery.img twrp-3.3.1-0-DRG_sprout-$(date +"%Y%m%d")-$(date +"%H%M").img
@@ -370,7 +385,9 @@ DRG-TWRP-O-SOURCE()
     
     $(date)
     
-    👤 By: Raghu Varma"             
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"          
     . build/envsetup.sh && lunch omni_DRG_sprout-eng && make -j32 recoveryimage
     cd out/target/product/DRG_sprout
     mv recovery.img twrp-3.2.3-0-DRG_sprout-$(date +"%Y%m%d")-$(date +"%H%M").img
