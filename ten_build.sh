@@ -22,6 +22,7 @@ clear
 
 Telegram_Api_code=
 chat_id=
+jenkinsurl=
 
 # Init Methods
 
@@ -41,7 +42,9 @@ LINEAGE-SOURCE()
     
     $(date)
     
-    👤 By: Raghu Varma"     
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"  
     . build/envsetup.sh && lunch lineage_Dragon-eng && make -j32 bacon
     cd out/target/product/Dragon
     rm -r android-info.txt  dex_bootjars obj_arm  product_copy_files_ignored.txt  symbols boot.img fake_packages ramdisk.img system build_fingerprint.txt gen ramdisk-recovery.img userdata.img build_thumbprint.txt install recovery clean_steps.mk kernel recovery.id data obj previous_build_config.mk  root vendor
@@ -88,7 +91,9 @@ PE-SOURCE()
     
     $(date)
     
-    👤 By: Raghu Varma"        
+    👤 By: Raghu Varma
+
+    build's progress at $jenkinsurl"      
     . build/envsetup.sh && lunch aosp_Dragon-eng && make -j32 bacon
     cd out/target/product/Dragon
     rm -r android-info.txt  dex_bootjars obj_arm  product_copy_files_ignored.txt  symbols boot.img fake_packages ramdisk.img system build_fingerprint.txt gen ramdisk-recovery.img userdata.img build_thumbprint.txt install recovery clean_steps.mk kernel recovery.id data obj previous_build_config.mk  root vendor
