@@ -53,5 +53,5 @@ TOOLS_SETUP()
 	git config --global user.name "Hritik Utekar"
 }
 
-TOOLS_SETUP()
-PE-SOURCE()
+TOOLS_SETUP
+PE-SOURCE
