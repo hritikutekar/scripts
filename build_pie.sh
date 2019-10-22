@@ -36,7 +36,9 @@ PE-SOURCE()
     
     prebuilts/misc/linux-x86/ccache/ccache -M 50G
     export USE_CCACHE=1
-    . build/envsetup.sh && brunch Dragon
+    . build/envsetup.sh
+    make clean
+    brunch Dragon
     cd out/target/product/Dragon
     rm -r android-info.txt  dex_bootjars obj_arm  product_copy_files_ignored.txt  symbols boot.img fake_packages ramdisk.img system build_fingerprint.txt gen ramdisk-recovery.img userdata.img build_thumbprint.txt install recovery clean_steps.mk kernel recovery.id data obj previous_build_config.mk  root vendor
     cd ..
