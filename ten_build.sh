@@ -20,14 +20,10 @@ clear
 
 PE-SOURCE()
 {
-    mkdir pe
     cd pe
-    echo -ne '\n' | repo init -u https://github.com/pe-wip/manifest -b ten --depth=1
-    repo sync -c --no-tags --no-clone-bundle -f --force-sync -j16
-    git clone https://github.com/LineageOS/android_packages_resources_devicesettings.git -b lineage-17.0 packages/resources/devicesettings
-    git clone https://github.com/RaghuVarma331/android_device_nokia_Dragon.git -b ten device/nokia/Dragon
-    git clone https://github.com/RaghuVarma331/android_kernel_nokia_sdm660.git -b pie --depth=1 kernel/nokia/sdm660
-    git clone https://gitlab.com/RaghuVarma331/vendor_nokia_dragon.git -b ten vendor/nokia/Dragon
+
+    ccache -M 50G
+    export USE_CCACHE=1
 
     . build/envsetup.sh
     brunch Dragon
