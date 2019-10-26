@@ -21,15 +21,18 @@ clear
 PE-SOURCE()
 {
     cd pe
+
     rm -r vendor/nokia/Dragon
+    rm -r device/nokia/Dragon
+
     git clone https://gitlab.com/RaghuVarma331/vendor_nokia_dragon.git -b ten vendor/nokia/Dragon
+    git clone https://github.com/RaghuVarma331/android_device_nokia_Dragon.git -b ten device/nokia/Dragon
 
     ccache -M 50G
     export USE_CCACHE=1
 
     . build/envsetup.sh
     make clean
-    brunch Dragon
 }
 TOOLS_SETUP()
 {
