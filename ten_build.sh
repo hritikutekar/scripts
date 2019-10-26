@@ -21,11 +21,14 @@ clear
 PE-SOURCE()
 {
     cd pe
+    rm -r vendor/nokia/Dragon
+    git clone https://gitlab.com/RaghuVarma331/vendor_nokia_dragon.git -b ten vendor/nokia/Dragon
 
     ccache -M 50G
     export USE_CCACHE=1
 
     . build/envsetup.sh
+    make clean
     brunch Dragon
 }
 TOOLS_SETUP()
